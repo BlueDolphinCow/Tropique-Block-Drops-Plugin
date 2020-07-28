@@ -9,10 +9,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 
-import java.lang.reflect.Array;
-import java.util.List;
-import java.util.Random;
-
 public class BlockBreak implements Listener {
 
     @EventHandler

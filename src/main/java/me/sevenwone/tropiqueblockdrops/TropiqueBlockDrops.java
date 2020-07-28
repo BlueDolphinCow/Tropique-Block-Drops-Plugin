@@ -20,12 +20,12 @@ public final class TropiqueBlockDrops extends JavaPlugin {
         int previousIndexTwo = 0;
         List<String> customDrops = Config.checkList("custom-drop-values");
         String[] currentDrops = new String[9999];
-        for (int index = 0; index < customDrops.size(); index++) {
-            for (int aIndex = 0; aIndex < Integer.parseInt(customDrops.get(index).split(";")[1]); aIndex++) {
-                currentDrops[aIndex+previousIndex] = customDrops.get(index).split(";")[0];
+        for (String customDrop : customDrops) {
+            for (int aIndex = 0; aIndex < Integer.parseInt(customDrop.split(";")[1]); aIndex++) {
+                currentDrops[aIndex + previousIndex] = customDrop.split(";")[0];
                 previousIndexTwo = aIndex;
             }
-            previousIndex = previousIndexTwo+1;
+            previousIndex = previousIndexTwo + 1;
         }
         Config.setCurrentDrops(currentDrops);
         // Events
