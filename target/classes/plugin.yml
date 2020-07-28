@@ -1,6 +1,0 @@
-name: TropiqueBlockDrops
-version: 1.0-SNAPSHOT
-main: me.sevenwone.tropiqueblockdrops.TropiqueBlockDrops
-api-version: 1.13
-authors: [7w1]
-description: Custom block drops plugin for Tropique
