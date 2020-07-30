@@ -16,9 +16,13 @@ public class BlockBreak implements Listener {
         Block block = event.getBlock();
         if (block.getType() == Material.getMaterial(Config.checkMessage("custom-drop-block"))) {
             Location location = block.getLocation();
-            ItemStack itemStack = new ItemStack(Config.getRandomItem(), 1);
+            Material material = Config.getRandomItem();
+            ItemStack itemStack = new ItemStack(material, 1);
             event.setDropItems(false);
             location.getWorld().dropItemNaturally(location,itemStack);
+            if (Config.checkList("send-message-values").contains(material.name())) {
+                event.getPlayer().sendMessage(Config.checkMessage("custom-drop-message").replace("{0}", material.name().toLowerCase()));
+            }
         }
     }
 
