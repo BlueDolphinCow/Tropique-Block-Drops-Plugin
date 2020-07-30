@@ -4,3 +4,8 @@ main: me.sevenwone.tropiqueblockdrops.TropiqueBlockDrops
 api-version: 1.13
 authors: [7w1]
 description: Custom block drops plugin for Tropique
+commands:
+  tropiqueblockdrops:
+    description: Reloads the plugin.
+    usage: /tropiqueblockdrops
+    aliases: [tbd]
