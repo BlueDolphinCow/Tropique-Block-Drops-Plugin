@@ -9,8 +9,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class TropiqueBlockDrops extends JavaPlugin {
 
+    private static TropiqueBlockDrops instance;
+
     @Override
     public void onEnable() {
+        instance = this;
         Logger.log("&aPlugin starting up.");
         // Config
         getConfig().options().copyDefaults();
@@ -25,6 +28,10 @@ public final class TropiqueBlockDrops extends JavaPlugin {
     @Override
     public void onDisable() {
         Logger.log("&cPlugin shutting down.");
+    }
+
+    public static TropiqueBlockDrops getInstance() {
+        return instance;
     }
 
 }
