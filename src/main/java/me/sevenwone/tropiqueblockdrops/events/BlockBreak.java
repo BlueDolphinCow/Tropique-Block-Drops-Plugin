@@ -18,7 +18,7 @@ public class BlockBreak implements Listener {
 
     private static FileConfiguration config = TropiqueBlockDrops.getInstance().getConfig();
 
-    @EventHandler
+    @EventHandler(ignoreCancelled = true)
     public void onBlockBreak(BlockBreakEvent event) {
         Player player = event.getPlayer();
         Block block = event.getBlock();
